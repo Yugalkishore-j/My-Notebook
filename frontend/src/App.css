@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(90deg, #09203F 50%, #537895 100%);
+  color: whitesmoke;
+}
+
+
+.navbar-brand {
+  color: white !important;
+  font-size: rem;
+}
+
+i {
+  cursor: pointer;
+}
+
+.alert {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  z-index: 1000;
+
+}
+
+.addnote-h2 {
+  font-family: "Cinzel", serif;
+
+}
+
+/* Add Note Section */
+.note-box {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 1rem;
+  background: linear-gradient(90deg, #09203F 50%, #537895 100%);
+  max-width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(251, 252, 252, 0.846);
+  border-radius: 10px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.note-box:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.note-box input {
+  width: 90%;
+  margin: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.S-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centers the items */
+  gap: 18px;
+  /* Adds space between the notes */
+  padding: 40px;
+  max-width: 90rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.S-notes:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Note Cards */
+.note-card {
+  flex: 1 1 250px;
+  /* Adjusts to available space with a minimum width */
+  max-width: 240px;
+  min-width: 130px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.note-card {
+  border: 1px solid #686666ca;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  min-width: 150px;
+}
+
+.card-title,
+.card-text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  padding-right: 2rem;
+  color: #000000;
+}
+
+.icon {
+  align-items: center;
+  color: #232528;
+  transform: scale(1.1);
+  padding-bottom: 0.5rem;
+}
+
+.note-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.update-container {
+  background-color: #40434E;
+}
+
+/* Button Styles */
+.btn {
+  padding: 6px 15px;
+  border-radius: 30px;
+  border: 2px solid rgba(251, 252, 252, 0.846);
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 10px rgba(25, 95, 170, 0.2);
+}
+
+.btn:hover {
+  background: rgb(2, 9, 17);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 86, 179, 0.4);
+}
+
+.about-container {
+  margin: 10rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: black;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: black;
+}
+
+
+.circle-bg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: -10;
+
+}
+
+.main-container {
+  position: relative;
+  z-index: -1;
+}
+
+.container-p {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.profile-card {
+  text-align: center;
+  max-width: 340px;
+  background-color: #5b9ada84;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card i {
+  font-size: 3rem;
+  color: rgb(228, 214, 214);
+  margin-bottom: 15px;
+}
+
+.profile-card h3 {
+  margin: 10px 0 10px 0;
+  font-size: 1.2rem;
+  color: #f7f6f6;
+
+}
+
+
+@media (max-width: 576px) {
+  .alert {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .S-notes {
+    margin-left: 15px;
+    padding: 20px;
+    width: 90%;
+
+  }
+
+  .notes-container {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .note-card {
+    width: 90%;
+  }
+
+  .update-container {
+    width: 90%;
+    margin: 10rem auto;
+  }
+
+}
