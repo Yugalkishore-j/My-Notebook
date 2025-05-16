@@ -216,7 +216,14 @@ i {
   color: #f7f6f6;
 
 }
-
+.pw-icon{
+  position: absolute;
+  top : 50% ;
+  right: 10px;
+  transform: translateY(-50%) ;
+  cursor: pointer;
+  color: #666
+}
 
 @media (max-width: 576px) {
   .alert {

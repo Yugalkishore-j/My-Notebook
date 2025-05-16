@@ -1,16 +1,18 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertContext } from '../context/notes/AlertContext';
+import { baseUrl } from '../Urls';
 
 const Login = () => {
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
+    const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const { showAlert } = useContext(AlertContext);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`http://localhost:5000/api/auth/login`, {
+        const response = await fetch(`${baseUrl}/api/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -19,7 +21,7 @@ const Login = () => {
         });
 
         const json = await response.json();
-      
+
 
         if (json.success) {
             // Save the "AuthToken" and redirect user
@@ -48,10 +50,25 @@ const Login = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" name="password" value={credentials.password} onChange={onChange} id="password" className="form-control" />
+                    <div className="position-relative">
+                        <input
+                            type={showPassword ? "text" : "password"}
+                            name="password"
+                            value={credentials.password}
+                            onChange={onChange}
+                            id="password"
+                            className="form-control"
+                        />
+                        <i
+                            className={` pw-icon fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+                            onClick={() => setShowPassword(!showPassword)}
+                            
+                        />
+                    </div>
                 </div>
-
                 <button type="submit" className="btn btn-primary">Login</button>
+                <button type="button" className="btn btn-primary mx-3" onClick={() => navigate('/signup')}> Signup </button>
+                
             </form>
         </div>
     );

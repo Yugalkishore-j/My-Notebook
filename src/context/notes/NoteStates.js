@@ -1,10 +1,11 @@
 import NoteContext from './noteContext';
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { baseUrl } from '../../Urls'; 
 
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000"
+  const host = `${baseUrl}`;
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial);
   const navigate = useNavigate();

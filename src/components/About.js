@@ -4,7 +4,6 @@ import noteContext from '../context/notes/noteContext';
 
 const About = () => {
   const a = useContext(noteContext)
-  // After (fix: remove or use it)
 console.log(a);
   return (
 
